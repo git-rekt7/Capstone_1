@@ -117,12 +117,12 @@ SELECT
     Sales_Territory,
     Online_Revenue,
     RANK() OVER (
-		ORDER BY Online_Revenue DESC
+				ORDER BY Online_Revenue DESC
 		) AS State_Rank
 FROM (
     SELECT
         o.ShiptoState AS Sales_Territory,
-        FORMAT(SUM(o.SalesTotal), 2) AS Online_Revenue
+        SUM(o.SalesTotal) AS Online_Revenue
     FROM 
 		Online_Sales o
     JOIN 
