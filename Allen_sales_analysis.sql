@@ -46,7 +46,7 @@ SELECT
     l.State,
     m.Region,
 
-    FORMAT (SUM(s.Sale_Amount), 2) AS Total_Revenue,
+    FORMAT (SUM(s.Sale_Amount), 2) AS State_Revenue,
 
     (
         SELECT 
